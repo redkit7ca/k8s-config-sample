@@ -1,0 +1,10 @@
+replicaCount: 3
+spec:
+  type: NodePort
+tag: final-pod
+Ports:
+  port: 8080
+  targetPort: 80
+containers:
+- name: final-container
+  image: final:v1

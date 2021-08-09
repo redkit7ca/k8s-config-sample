@@ -1,0 +1,14 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: final-np-service
+spec:
+  type: {{ .Values.spec.type}}
+  selector:
+    tag: {{ .Values.tag}}
+  ports:
+    - name: final-np  
+      port: {{ .Values.Ports.port}}
+      targetPort: {{ .Values.Ports.targetPort}}
+      
+  
